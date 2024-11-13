@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Trabajo en Equipo con GitHub</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Guía de Trabajo en Equipo con GitHub</h1>
+    </header>
+    
+    <div class="container">
+        <div class="section">
+            <h2>¿Qué es GitHub?</h2>
+            <p>GitHub es una plataforma de desarrollo colaborativo para gestionar proyectos y control de versiones usando Git. Facilita el trabajo en equipo, permite gestionar el código fuente y ofrece herramientas para revisión y despliegue.</p>
+        </div>
+
+        
+        <div class="section">
+            <h2>Conceptos Clave</h2>
+            <ul>
+                <li><strong>Repositorio:</strong> Carpeta en la que se almacena el proyecto con su historial de cambios.</li>
+                <li><strong>Commit:</strong> Registro de cambios hechos en el proyecto.</li>
+                <li><strong>Rama (Branch):</strong> Línea de trabajo independiente para hacer cambios sin afectar la rama principal.</li>
+                <li><strong>Pull Request:</strong> Solicitud de integración de una rama a otra para revisión de cambios.</li>
+                <li><strong>Merge:</strong> Acción de combinar cambios de una rama en otra.</li>
+            </ul>
+        </div>
+
+        
+        <div class="section">
+            <h2>Configuración del Proyecto y Permisos</h2>
+            <ol>
+                <li>Crear el repositorio en GitHub.</li>
+                <li>Agregar colaboradores en <strong>Settings &gt; Collaborators</strong>.</li>
+                <li>Configurar permisos para que otros usuarios puedan realizar cambios.</li>
+            </ol>
+        </div>
+
+        
+        <div class="section">
+            <h2>Comandos Básicos para Trabajo en Equipo</h2>
+            <p>Los siguientes comandos son esenciales para que un usuario pueda modificar el proyecto y otro pueda deshacer los cambios:</p>
+
+            
+            <h3>1. Clonar el Repositorio</h3>
+            <div class="commands">
+                <pre>git clone &lt;URL_del_Repositorio&gt;</pre>
+            </div>
+
+            
+            <h3>2. Crear una Rama para Modificar el Proyecto</h3>
+            <p>Permite a cada colaborador trabajar en su propia línea de trabajo sin afectar la rama principal.</p>
+            <div class="commands">
+                <pre>git checkout -b nombre-de-la-rama</pre>
+            </div>
+
+            
+            <h3>3. Realizar Commit y Subir Cambios</h3>
+            <div class="commands">
+                <pre>
+                    git add .
+                    git commit -m "Descripción de los cambios"
+                    git push origin nombre-de-la-rama
+                </pre>
+            </div>
+
+            
+            <h3>4. Crear un Pull Request</h3>
+            <p>Al subir los cambios, el colaborador puede abrir un pull request en GitHub para que otros revisen y aprueben los cambios antes de fusionarlos.</p>
+
+            
+            <h3>5. Deshacer Cambios</h3>
+            <p>Si otro colaborador quiere revertir el commit de un compañero, puede usar:</p>
+            <div class="commands">
+                <pre>
+                    # Para revertir el último commit sin borrar el trabajo
+                    git revert HEAD
+
+                    # Para revertir completamente a un commit anterior
+                    git reset --hard &lt;commit_ID&gt;
+                </pre>
+            </div>
+        </div>
+
+        
+        <div class="section">
+            <h2>Mejores Prácticas de Colaboración</h2>
+            <ul>
+                <li>Usar ramas para cada funcionalidad o tarea.</li>
+                <li>Hacer commits frecuentes y con mensajes descriptivos.</li>
+                <li>Revisar y aprobar pull requests antes de hacer merge.</li>
+                <li>Comunicarse constantemente con el equipo para resolver dudas y conflictos.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer>
+        <p>2024 Guía de GitHub para Trabajo en Equipo</p>
+    </footer>
+</body>
+</html>
